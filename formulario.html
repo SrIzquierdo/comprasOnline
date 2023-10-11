@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel=stylesheet href="stilo.css">
+    </head>
+    <body>
+        <!-- Banner con el logo de la página -->
+        <header>
+            <span>FORMULARIO</span>
+            <!-- Menú para ir a la página del formulario -->
+            <a href="index.html"><img src="imagenes/inicio.png" alt="Formulario" class="iconos"></a>
+        </header>
+        <nav id="menu">
+            <ul>
+                <li><a href="#credito">creditos</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+            </ul>
+        </nav>
+        <main id="cuerpo">
+            <main>
+                <section>
+                    <h1 id="credito">Creditos</h1>
+                    <p class="texto">
+                        Estudiante de 2DAW, este trabajo fue para utilizar lo aprendido en el curso pasado al igual que añadir nuevos conocimientos del inicio de este.
+                    </p>
+                    <form method=post action="formulario.php" id="formulario">
+                        <fieldset>
+                            <label for="nombre">Nombre completo: </label><input type=text name="nombre">
+                            <p>
+                                <select name="ciudad">
+                                    <option value="Badajoz">Badajoz</option> 
+                                    <option value="Mérida">Mérida</option>
+                                    <option value="Cáceres">Caceres</option>
+                                </select>
+                            </p>
+                            <legend>Clase</legend>
+                            <fieldset>
+                                <legend>Etapa</legend>
+                                <!-- Radio Button -->
+                                <p>
+                                    Letra
+                                    A:<input type=radio name="letra" value="a"checked>
+                                    B:<input type=radio name="letra" value="b">
+                                    C:<input type=radio name="letra" value="c">
+                                    D:<input type=radio name="letra" value="d">
+                                </p>
+                                <!-- Checkbox múltiple ( El NAME de todos es el mismo y es un array ) -->
+                                <p>ESO:<input type=checkbox name="etapa[]" value="eso"></p>
+                                <p>Bachillerato:<input type=checkbox name="etapa[]" value="bach"></p>
+                                <p>Ciclo Formativo:<input type=checkbox name="etapa[]" value="ciclo"></p>
+                            </fieldset>
+                            <!-- Checkbox Único -->
+                            <p>
+                                ¿Acepta los términos y condiciones de está página? 
+                                <p><input type=checkbox name="aceptado"></p>
+                            </p>
+                            <input type=submit>
+                        </fieldset>
+                    </form>
+                </section>
+            </main>
+        </main>
+        <footer></footer>
+    </body>
+</html>
